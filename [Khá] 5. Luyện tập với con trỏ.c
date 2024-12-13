@@ -30,9 +30,14 @@ int main() {
 
 
 void arrUpd(int *arr, int value, int pos){
+    int check = 0;
     for(int i = 0; i <= pos; i++) {
         if(*(arr + i) == pos) {
             *(arr + pos - 1) = value;
+            check = 1;
         }
+    }
+    if(check == 0) {
+        printf("Phan tu khong ton tai: ");
     }
 }
